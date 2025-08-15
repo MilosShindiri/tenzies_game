@@ -3,5 +3,70 @@
 }
 
 body {
+  font-family: Karla, sans-serif;
+  font-weight: 700;
   margin: 0;
+  background-color: #0b2434;
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  background-color: #f5f5f5;
+  width: 90vw;
+  height: 90vh;
+  border-radius: 5px;
+  justify-self: center;
+}
+
+.title {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.text {
+  color: #4a4e74;
+  display: flex;
+  justify-content: center;
+}
+
+.diceArea {
+  display: flex;
+  justify-content: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button {
+  display: block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #5035ff;
+  color: white;
+  cursor: pointer;
+}
+
+.diceArea {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 250px;
+  /* max-width: calc(5 * 40px + 4 * 10px); */
+  margin: auto;
+}
+
+.dice {
+  width: 40px;
+  height: 40px;
 }
