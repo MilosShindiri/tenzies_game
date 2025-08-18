@@ -31,7 +31,7 @@ Try to get all dice to show the same number. Click a die to "hold" its value bet
    npm run dev
 
 ##Project Structure
-    ```sh
+```
         tenzis_app/
         ├── components/
         │   └── [Dices.jsx](http://_vscodecontentref_/0)
@@ -48,7 +48,7 @@ Try to get all dice to show the same number. Click a die to "hold" its value bet
         │       └── react.svg
         ├── [index.html](http://_vscodecontentref_/5)
         ├── [package.json](http://_vscodecontentref_/6)
-
+```
 
 ##Dependencies
 -React
