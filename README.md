@@ -4,7 +4,7 @@ A simple and fun dice game built with **React** and **Vite**!
 Try to get all dice to show the same number. Click a die to "hold" its value between rolls. When all dice are held and match, you win!
 
 <p align="left">
-  <img src="images/dice-cube.png" alt="Screenshot" width="120" background: white; style="border-radius: 8px; box-shadow: 0 2px 8px #0002;" />
+  <img src="images/dice-cube.png" alt="Screenshot" width="120" style="border-radius: 8px; box-shadow: 0 2px 8px #0002;" />
 </p>
 
 ## Features
