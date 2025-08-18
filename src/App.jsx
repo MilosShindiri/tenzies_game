@@ -17,6 +17,9 @@ export default function App() {
   function generateAllDice() {
     return Array.from({ length: numberOfDices }, generateDice);
   }
+  function resetGame() {
+    setDices(generateAllDice());
+  }
 
   const [dices, setDices] = useState(generateAllDice);
 
@@ -33,6 +36,17 @@ export default function App() {
       )
     );
   }
+  const newButton = useRef(null);
+  const gameWon =
+    dices.every((die) => die.isHeld) &&
+    dices.every((die) => die.value === dices[0].value);
+
+  useEffect(() => {
+    console.log("Komponenta se renderovala");
+    if (gameWon) {
+      newButton.current.focus();
+    }
+  }, [gameWon]);
 
   return (
     <>
@@ -44,8 +58,12 @@ export default function App() {
         </p>
         <Dices dices={dices} hold={hold} />
         <div className="button-container">
-          <button className="button" onClick={rollDice}>
-            Roll
+          <button
+            ref={newButton}
+            className="button"
+            onClick={gameWon ? resetGame : rollDice}
+          >
+            {gameWon ? "New Game" : "Roll"}
           </button>
         </div>
       </main>
