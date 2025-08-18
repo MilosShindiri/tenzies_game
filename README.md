@@ -1,12 +1,60 @@
-# React + Vite
+# Tenzis App 🎲
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and fun dice game built with **React** and **Vite**!  
+Try to get all dice to show the same number. Click a die to "hold" its value between rolls. When all dice are held and match, you win!
 
-Currently, two official plugins are available:
+![Screenshot](images/dice-cube.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- 🎲 Roll 10 dice at once
+- 🟩 Click dice to hold/unhold their value
+- 🏆 Confetti celebration when you win
+- ♿ Accessible win announcement
+- ⚡ Fast, modern React app with Vite
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+1. **Clone the repo:**
+   ```sh
+   git clone https://github.com/yourusername/tenzis_app.git
+   cd tenzis_app
+
+1. **Install dependencies:**
+   ```sh
+   npm install
+
+3. **Run the app locally:**
+   ```sh
+   npm run dev
+
+##Project Structure
+tenzis_app/
+├── components/
+│   └── [Dices.jsx](http://_vscodecontentref_/0)
+├── images/
+│   └── dice-cube.png
+├── public/
+│   └── vite.svg
+├── src/
+│   ├── [App.jsx](http://_vscodecontentref_/1)
+│   ├── [App.css](http://_vscodecontentref_/2)
+│   ├── [index.jsx](http://_vscodecontentref_/3)
+│   ├── [index.css](http://_vscodecontentref_/4)
+│   └── assets/
+│       └── react.svg
+├── [index.html](http://_vscodecontentref_/5)
+├── [package.json](http://_vscodecontentref_/6)
+
+
+##Dependencies
+-React
+-Vite
+-nanoid (for unique dice IDs)
+-react-confetti (for win animation)
+
+##Accessibility
+-Announces win state for screen readers.
+-Keyboard focus moves to "New Game" button after winning.
+
+Made with ❤️ by Milos Petrovic
