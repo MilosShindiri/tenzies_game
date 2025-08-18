@@ -31,22 +31,23 @@ Try to get all dice to show the same number. Click a die to "hold" its value bet
    npm run dev
 
 ##Project Structure
-tenzis_app/
-├── components/
-│   └── [Dices.jsx](http://_vscodecontentref_/0)
-├── images/
-│   └── dice-cube.png
-├── public/
-│   └── vite.svg
-├── src/
-│   ├── [App.jsx](http://_vscodecontentref_/1)
-│   ├── [App.css](http://_vscodecontentref_/2)
-│   ├── [index.jsx](http://_vscodecontentref_/3)
-│   ├── [index.css](http://_vscodecontentref_/4)
-│   └── assets/
-│       └── react.svg
-├── [index.html](http://_vscodecontentref_/5)
-├── [package.json](http://_vscodecontentref_/6)
+    ```sh
+        tenzis_app/
+        ├── components/
+        │   └── [Dices.jsx](http://_vscodecontentref_/0)
+        ├── images/
+        │   └── dice-cube.png
+        ├── public/
+        │   └── vite.svg
+        ├── src/
+        │   ├── [App.jsx](http://_vscodecontentref_/1)
+        │   ├── [App.css](http://_vscodecontentref_/2)
+        │   ├── [index.jsx](http://_vscodecontentref_/3)
+        │   ├── [index.css](http://_vscodecontentref_/4)
+        │   └── assets/
+        │       └── react.svg
+        ├── [index.html](http://_vscodecontentref_/5)
+        ├── [package.json](http://_vscodecontentref_/6)
 
 
 ##Dependencies
