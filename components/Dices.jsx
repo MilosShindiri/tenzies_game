@@ -1,20 +1,16 @@
-export default function Dices({ dices }) {
-  // let generateNumber = Math.floor(Math.random());
-  // console.log(generateNumber);
-
+export default function Dices({ dices, hold }) {
   return (
-    <>
-      <section className="diceArea">
-        {dices.map((dice, index) => (
-          <button className="dice" key={index}>
-            {dice}
-          </button>
-        ))}
-      </section>
-    </>
+    <section className="diceArea">
+      {dices.map((dice) => (
+        <button
+          key={dice.id}
+          className="dice"
+          style={{ backgroundColor: dice.isHeld ? "#59E391" : "white" }}
+          onClick={() => hold(dice.id)}
+        >
+          {dice.value}
+        </button>
+      ))}
+    </section>
   );
 }
-
-// {items.map((item, index) => (
-//           <li key={index}>{item}</li>
-//         ))}

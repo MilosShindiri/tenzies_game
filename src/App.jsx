@@ -1,21 +1,19 @@
+import { nanoid } from "nanoid";
 import { useState, useRef, useEffect } from "react";
 import Dices from "/components/Dices";
 
 export default function App() {
   function generateDice() {
-    return Math.ceil(Math.random() * 6);
-    // const newNumber = Math.ceil(Math.random() * 6);
-    // console.log(newNumber);
-    // setDices((prevDices) => [...prevDices, newNumber]);
+    return {
+      id: nanoid(),
+      value: Math.ceil(Math.random() * 6),
+      isHeld: false,
+    };
   }
+
   //future proof
   const numberOfDices = 10;
 
-  // function createDie() {
-  //   return {
-  //     value: dices,
-  //   };
-  // }
   function generateAllDice() {
     return Array.from({ length: numberOfDices }, generateDice);
   }
@@ -23,15 +21,18 @@ export default function App() {
   const [dices, setDices] = useState(generateAllDice);
 
   function rollDice() {
-    setDices(generateAllDice());
+    setDices((oldDice) =>
+      oldDice.map((die) => (die.isHeld ? die : generateDice()))
+    );
   }
-  // function indexing(id) {
-  //   setDices((prevDices) =>
-  //     prevDices.map((item) => {
-  //       return item.id;
-  //     })
-  //   );
-  // }
+
+  function hold(id) {
+    setDices((oldDice) =>
+      oldDice.map((die) =>
+        die.id === id ? { ...die, isHeld: !die.isHeld } : die
+      )
+    );
+  }
 
   return (
     <>
@@ -41,7 +42,7 @@ export default function App() {
           Roll until all dice are the same. Click each die to freeze it at its
           current value between rolls.
         </p>
-        <Dices dices={dices} />
+        <Dices dices={dices} hold={hold} />
         <div className="button-container">
           <button className="button" onClick={rollDice}>
             Roll
