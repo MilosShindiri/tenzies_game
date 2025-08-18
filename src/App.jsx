@@ -8,7 +8,7 @@ export default function App() {
     // console.log(newNumber);
     // setDices((prevDices) => [...prevDices, newNumber]);
   }
-
+  //future proof
   const numberOfDices = 10;
 
   // function createDie() {
